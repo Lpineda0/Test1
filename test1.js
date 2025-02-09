@@ -1,4 +1,4 @@
-function esPalindromo(string) {
+/*function esPalindromo(string) 
   //funcion para ver si es palindromo y que su parametro es texto
   string = string.toLowerCase(); //hacer minusculas
   let newString = string; //almacenar todos los caracteres en uno nuevo
@@ -30,3 +30,68 @@ console.log(esPalindromo("somos"));
 console.log(esPalindromo("an na"));
 console.log(esPalindromo("rodador"));
 console.log(esPalindromo("never odd or even"));
+console.log(esPalindromo("somos somos"));
+*/
+
+/*function esPalindromo(str) {
+  str = str.toLowerCase();
+  let newStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+  }
+  if (str === newStr) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(esPalindromo("SoMos"));
+console.log(esPalindromo("LLoni"));
+console.log(esPalindromo("somos"));
+console.log(esPalindromo("an na"));
+console.log(esPalindromo("rodador"));
+console.log(esPalindromo("never odd or even"));
+console.log(esPalindromo("somos somos"));
+*/
+
+// function contarVocales(string) {
+//   string = string.toUpperCase();
+//   let vocales = "";
+//   let cuenta = 0;
+//   for (let i = 0; i < string.length; i++) {
+//     if (
+//       string[i] === "A" ||
+//       string[i] === "E" ||
+//       string[i] === "I" ||
+//       string[i] === "O" ||
+//       string[i] === "U"
+//     ) {
+//       vocales += string[i];
+//       cuenta++;
+//     }
+//   }
+//   return { vocales, cuenta };
+// }
+function contarVocales(string) {
+  string = string.toUpperCase();
+  const vowels = {
+    text: "",
+    number: 0,
+  };
+  for (let i = 0; i < string.length; i++) {
+    if (
+      string[i] === "A" ||
+      string[i] === "E" ||
+      string[i] === "I" ||
+      string[i] === "O" ||
+      string[i] === "U"
+    ) {
+      vowels.text += string[i];
+      vowels.number++;
+    }
+  }
+  return vowels;
+}
+
+console.log(contarVocales("Abracadabro"));
+console.log(contarVocales("HolaBebe"));
